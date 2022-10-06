@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
 
     // данные об имени, авторе и годе публикации.
@@ -37,6 +39,21 @@ public class Book {
     public void bookPrint(){
         System.out.printf("%n Название:%s%n Автор:%s%n Год издания:%s%n",
                 this.getBookName(),this.getAuthorFullName(), this.getYear());
+    }
+
+    public String toString() {
+        return  this.bookName + " " + this.authorName + this.year;
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return year == book.year && Objects.equals(bookName, book.bookName) && Objects.equals(authorName, book.authorName);
+    }
+
+    public int hashCode() {
+        return Objects.hash(bookName, authorName, year);
     }
 }
 

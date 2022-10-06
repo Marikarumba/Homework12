@@ -1,12 +1,6 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Практика на уроке");
-        Person sarah = new Person("Sarah", 30);
-        System.out.println("sarah.name = " + sarah.getName());
-        System.out.println("sarah.age = " + sarah.getAge());
-        Person john = new Person("John", 18);
-
         System.out.println("Домашнее задание 1.9. Объекты и классы ");
         //В методе main создать несколько объектов Книга (достаточно двух)
         // и несколько объектов Автор (достаточно тоже двух) и инициализировать друг друга.
